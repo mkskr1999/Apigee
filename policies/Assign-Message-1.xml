@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<AssignMessage continueOnError="false" enabled="true" name="Assign-Message-1">
-    <DisplayName>Assign Message-1</DisplayName>
+<AssignMessage continueOnError="false" enabled="true" name="AM-AccessToken-Status">
+    <DisplayName>AM-AccessToken-Status</DisplayName>
     <Properties/>
     <Set>
         <Verb>POST</Verb>
