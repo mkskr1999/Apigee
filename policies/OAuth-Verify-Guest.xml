@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuth-Verify-Guest">
+    <DisplayName>OAuth-Verify-Guest</DisplayName>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>VerifyAccessToken</Operation>
+    <Scope>Guest Admin</Scope>
+    <GenerateResponse enabled="true"/>
+    <RFCCompliantRequestResponse>true</RFCCompliantRequestResponse>
+</OAuthV2>

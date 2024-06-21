@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout continueOnError="false" enabled="true" name="UserValidation">
+    <DisplayName>UserValidation</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="myRequest">
+        <Set>
+            <Headers>
+                <Header name="Accept">application/json</Header>
+            </Headers>
+            <Verb>POST</Verb>
+            <Payload variableSuffix="#" variablePrefix="@" contentType="application/json">
+                {"Username":"@username#",
+                "Password":"@password#"
+                }
+            </Payload>
+        </Set>
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>calloutResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://example.com</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

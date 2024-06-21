@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="OauthV2.0">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+        </Response>
+    </PostFlow>
+    <Flows>
+        <Flow name="OAuth-GenerateToken">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-v20-GenerateToken</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/GenerateToken") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="GenerateToken-Password">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>UserCredentials</Name>
+                </Step>
+                <Step>
+                    <Name>OAuth-v20-3</Name>
+                </Step>
+                <Step>
+                    <Name>Invalid_Grant_Type</Name>
+                    <Condition>grant_type != "password"</Condition>
+                </Step>
+                <Step>
+                    <Name>Invalid_Credentials</Name>
+                    <Condition>password = "" OR password = null OR username = "" OR username = null</Condition>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/token") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Revoke_AccessToken">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-v20-1</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>Assign-Message-1</Name>
+                </Step>
+            </Response>
+            <Condition>(proxy.pathsuffix MatchesPath "/revoke") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="Refresh_Access_Token">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>OAuth-v20-4</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/refresh") and (request.verb = "POST")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/oauth/v1</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

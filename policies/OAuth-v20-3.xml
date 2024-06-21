@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuth-v20-3">
+    <DisplayName>OAuth-V2.0-GebarateToken-Password</DisplayName>
+    <Properties/>
+    <Attributes/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAccessToken</Operation>
+    <SupportedGrantTypes>
+        <GrantType>password</GrantType>
+    </SupportedGrantTypes>
+    <GenerateResponse enabled="true"/>
+    <GrantType>grant_type</GrantType>
+    <UserName>username</UserName>
+    <PassWord>password</PassWord>
+    <Tokens/>
+    <GenerateResponse enabled="true"/>
+    <RFCCompliantRequestResponse>true</RFCCompliantRequestResponse>
+</OAuthV2>

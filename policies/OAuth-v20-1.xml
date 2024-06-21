@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuth-v20-1">
+    <DisplayName>OAuth v2.0-1</DisplayName>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>InvalidateToken</Operation>
+    <GenerateResponse enabled="true"/>
+    <Tokens>
+        <Token type="accesstoken">request.header.access_token</Token>
+    </Tokens>
+    <RFCCompliantRequestResponse>true</RFCCompliantRequestResponse>
+</OAuthV2>

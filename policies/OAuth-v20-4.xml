@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuth-v20-4">
+    <DisplayName>OAuth v2.0-4</DisplayName>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>RefreshAccessToken</Operation>
+    <ExpiresIn>15000</ExpiresIn>
+    <RefreshTokenExpiresIn>30000</RefreshTokenExpiresIn>
+    <RefreshToken>request.header.token</RefreshToken>
+    <GrantType>request.header.grant_type</GrantType>
+    <GenerateResponse enabled="true"/>
+    <RFCCompliantRequestResponse>true</RFCCompliantRequestResponse>
+</OAuthV2>

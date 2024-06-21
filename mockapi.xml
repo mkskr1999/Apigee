@@ -1,0 +1,35 @@
+<APIProxy revision="29" name="mockapi">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1718893435113</CreatedAt>
+    <LastModifiedAt>1718893435113</LastModifiedAt>
+    <BasePaths>/mockapi</BasePaths>
+    <BasePaths>/oauth/v1</BasePaths>
+    <Policies>
+        <Policy>OAuth-v20-2</Policy>
+        <Policy>RF-Custom_Error</Policy>
+        <Policy>JS-CustomResponse</Policy>
+        <Policy>OAuth-v20-3</Policy>
+        <Policy>Invalid_Grant_Type</Policy>
+        <Policy>UserCredentials</Policy>
+        <Policy>Invalid_Credentials</Policy>
+        <Policy>UserValidation</Policy>
+        <Policy>OAuth-Verify-Admin</Policy>
+        <Policy>OAuth-Verify-Guest</Policy>
+        <Policy>OAuth-Verify-Customer</Policy>
+        <Policy>OAuth-v20-GenerateToken</Policy>
+        <Policy>OAuth-v20-1</Policy>
+        <Policy>Assign-Message-1</Policy>
+        <Policy>OAuth-v20-4</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>OauthV2.0</ProxyEndpoint>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JavaScript-1.js</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

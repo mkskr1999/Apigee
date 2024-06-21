@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 continueOnError="false" enabled="true" name="OAuth-v20-GenerateToken">
+    <DisplayName>OAuth-V2.0-GenerateToken</DisplayName>
+    <Properties/>
+    <Attributes/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn>30000</ExpiresIn>
+    <RefreshTokenExpiresIn>50000</RefreshTokenExpiresIn>
+    <SupportedGrantTypes>
+        <GrantType>client_credentials</GrantType>
+    </SupportedGrantTypes>
+    <GenerateResponse enabled="true"/>
+    <Scope>request.queryparam.scope</Scope>
+    <GrantType>request.queryparam.grant_type</GrantType>
+    <Tokens/>
+    <RFCCompliantRequestResponse>true</RFCCompliantRequestResponse>
+</OAuthV2>
